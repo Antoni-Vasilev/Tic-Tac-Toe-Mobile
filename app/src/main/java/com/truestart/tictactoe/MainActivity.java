@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.widget.Button;
 
 import com.truestart.tictactoe.function.ChangeStatusBarColor;
-import com.truestart.tictactoe.function.showScreen;
+import com.truestart.tictactoe.function.ShowScreen;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void buttonAction() {
-        button1vs1.setOnClickListener(v -> new showScreen(this, Activity1vs1.class));
+        button1vs1.setOnClickListener(v -> new ShowScreen(this, Activity1vs1.class));
     }
 
     @Override

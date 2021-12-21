@@ -1,9 +1,180 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activity1vs1">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/appColor"
+        app:titleTextColor="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:background="@color/black"
+            android:orientation="vertical"
+            android:padding="3dp"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                tools:ignore="InefficientWeight">
+
+                <TextView
+                    android:id="@+id/btn1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:fontFamily="@font/sf_pro_rounded_medium"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="50sp"
+                    tools:ignore="HardcodedText,NestedWeights" />
+
+                <TextView
+                    android:id="@+id/btn2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:fontFamily="@font/sf_pro_rounded_medium"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="50sp"
+                    tools:ignore="HardcodedText,NestedWeights" />
+
+                <TextView
+                    android:id="@+id/btn3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:fontFamily="@font/sf_pro_rounded_medium"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="50sp"
+                    tools:ignore="HardcodedText,NestedWeights" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                tools:ignore="InefficientWeight">
+
+                <TextView
+                    android:id="@+id/btn4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:fontFamily="@font/sf_pro_rounded_medium"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="50sp"
+                    tools:ignore="HardcodedText,NestedWeights" />
+
+                <TextView
+                    android:id="@+id/btn5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:fontFamily="@font/sf_pro_rounded_medium"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="50sp"
+                    tools:ignore="HardcodedText,NestedWeights" />
+
+                <TextView
+                    android:id="@+id/btn6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:fontFamily="@font/sf_pro_rounded_medium"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="50sp"
+                    tools:ignore="HardcodedText,NestedWeights" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                tools:ignore="InefficientWeight">
+
+                <TextView
+                    android:id="@+id/btn7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:fontFamily="@font/sf_pro_rounded_medium"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="50sp"
+                    tools:ignore="HardcodedText,NestedWeights" />
+
+                <TextView
+                    android:id="@+id/btn8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:fontFamily="@font/sf_pro_rounded_medium"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="50sp"
+                    tools:ignore="HardcodedText,NestedWeights" />
+
+                <TextView
+                    android:id="@+id/btn9"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:fontFamily="@font/sf_pro_rounded_medium"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="50sp"
+                    tools:ignore="HardcodedText,NestedWeights" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/playerReady"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view"
+        android:layout_marginTop="-50dp"
+        android:gravity="center"
+        android:text="Player X is ready"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>

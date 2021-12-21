@@ -3,7 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Toni/Desktop/Programirane/Android Studio/TicTacToe/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.30085470085470084" />
+        <entry key="..\:/Users/Toni/Desktop/Programirane/Android Studio/TicTacToe/app/src/main/res/drawable-v24/win_border.xml" value="0.30085470085470084" />
+        <entry key="..\:/Users/Toni/Desktop/Programirane/Android Studio/TicTacToe/app/src/main/res/drawable/background_black_corner_4dp.xml" value="0.30085470085470084" />
+        <entry key="..\:/Users/Toni/Desktop/Programirane/Android Studio/TicTacToe/app/src/main/res/drawable/border.xml" value="0.30085470085470084" />
+        <entry key="..\:/Users/Toni/Desktop/Programirane/Android Studio/TicTacToe/app/src/main/res/drawable/button_background_app_color_corner_6dp.xml" value="0.30085470085470084" />
         <entry key="..\:/Users/Toni/Desktop/Programirane/Android Studio/TicTacToe/app/src/main/res/drawable/button_background_appcolor_corner_6dp.xml" value="0.30085470085470084" />
+        <entry key="..\:/Users/Toni/Desktop/Programirane/Android Studio/TicTacToe/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.30085470085470084" />
+        <entry key="..\:/Users/Toni/Desktop/Programirane/Android Studio/TicTacToe/app/src/main/res/drawable/ic_launcher_background.xml" value="0.30085470085470084" />
+        <entry key="..\:/Users/Toni/Desktop/Programirane/Android Studio/TicTacToe/app/src/main/res/layout/activity_activity1vs1.xml" value="0.2876068376068376" />
         <entry key="..\:/Users/Toni/Desktop/Programirane/Android Studio/TicTacToe/app/src/main/res/layout/activity_main.xml" value="0.2876068376068376" />
       </map>
     </option>

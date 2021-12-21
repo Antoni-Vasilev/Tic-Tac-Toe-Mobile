@@ -10,4 +10,5 @@
 
     <color name="blue">#0082FF</color>
     <color name="appColor">@color/blue</color>
+    <color name="winColor">#82FF96</color>
 </resources>
