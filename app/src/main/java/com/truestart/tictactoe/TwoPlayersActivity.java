@@ -13,7 +13,9 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.truestart.tictactoe.function.ChangeStatusBarColor;
 
-public class Activity1vs1 extends AppCompatActivity {
+import java.util.Objects;
+
+public class TwoPlayersActivity extends AppCompatActivity {
 
     TextView btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, playerReady;
 
@@ -21,12 +23,14 @@ public class Activity1vs1 extends AppCompatActivity {
 
     int[][] map;
 
-    private static final String TITLE = "1 vs 1";
+    int scoreX = 0, scoreY = 0;
+
+    private static final String TITLE = "Two Players     X:0   Y:0";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_activity1vs1);
+        setContentView(R.layout.activity_two_players);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -88,7 +92,7 @@ public class Activity1vs1 extends AppCompatActivity {
         viewForWinner();
     }
 
-    @SuppressLint("UseCompatLoadingForDrawables")
+    @SuppressLint({"UseCompatLoadingForDrawables", "DefaultLocale"})
     private void viewForWinner() {
         Drawable background = getDrawable(R.drawable.win_border);
         if (map[0][0] == map[0][1] && map[0][1] == map[0][2] && map[0][0] != 0) {
@@ -175,6 +179,15 @@ public class Activity1vs1 extends AppCompatActivity {
         } else if (player == 2) {
             winner = "X";
         }
+
+        if (player == 2) {
+            scoreX++;
+        } else if (player == 1) {
+            scoreY++;
+        }
+
+        Objects.requireNonNull(getSupportActionBar()).setTitle(String.format("Two Players     X:%d   Y:%d", scoreX, scoreY));
+
         player = 0;
         String finalWinner = winner;
         AlertDialog alertDialog = new AlertDialog.Builder(this)

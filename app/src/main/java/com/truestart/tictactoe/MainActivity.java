@@ -10,19 +10,21 @@ import com.truestart.tictactoe.function.ShowScreen;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button button1vs1;
+    Button buttonOnePlayer, buttonTwoPlayers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        button1vs1 = findViewById(R.id.button1vs1);
+        buttonOnePlayer = findViewById(R.id.buttonOnePlayer);
+        buttonTwoPlayers = findViewById(R.id.buttonTwoPlayers);
         buttonAction();
     }
 
     private void buttonAction() {
-        button1vs1.setOnClickListener(v -> new ShowScreen(this, Activity1vs1.class));
+        buttonOnePlayer.setOnClickListener(v -> new ShowScreen(this, OnePlayerActivity.class));
+        buttonTwoPlayers.setOnClickListener(v -> new ShowScreen(this, TwoPlayersActivity.class));
     }
 
     @Override

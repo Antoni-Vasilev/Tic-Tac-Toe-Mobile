@@ -4,16 +4,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:orientation="vertical"
     android:padding="20dp"
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button1vs1"
+        android:id="@+id/buttonOnePlayer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/button_background_app_color_corner_6dp"
         android:fontFamily="@font/sf_pro_rounded_medium"
-        android:text="1 vs 1"
+        android:text="One Player   (Beta)"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/buttonTwoPlayers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_background_app_color_corner_6dp"
+        android:fontFamily="@font/sf_pro_rounded_medium"
+        android:text="Two Players"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
