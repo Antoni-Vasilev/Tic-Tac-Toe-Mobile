@@ -1,36 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical"
-    android:padding="20dp"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/buttonOnePlayer"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/button_background_app_color_corner_6dp"
-        android:fontFamily="@font/sf_pro_rounded_medium"
-        android:text="One Player   (Beta)"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        tools:ignore="HardcodedText" />
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/appColor"
+        app:titleTextColor="@color/white" />
 
-    <Button
-        android:id="@+id/buttonTwoPlayers"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/button_background_app_color_corner_6dp"
-        android:fontFamily="@font/sf_pro_rounded_medium"
-        android:text="Two Players"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        tools:ignore="HardcodedText" />
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="60dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/sf_pro_rounded_medium"
+            android:gravity="center"
+            android:text="Tic Tac Toe"
+            android:textColor="@color/black"
+            android:textSize="100sp"
+            tools:ignore="HardcodedText,UnusedAttribute" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <Button
+            android:id="@+id/buttonOnePlayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/appColor"
+            android:fontFamily="@font/sf_pro_rounded_medium"
+            android:padding="10dp"
+            android:text="One Player   (Beta)"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/buttonTwoPlayers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/appColor"
+            android:fontFamily="@font/sf_pro_rounded_medium"
+            android:padding="10dp"
+            android:text="Two Players"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
 
 </LinearLayout>

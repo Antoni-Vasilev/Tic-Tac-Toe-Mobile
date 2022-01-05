@@ -9,12 +9,13 @@ public class ShowScreen {
     public ShowScreen(Context context, Class activity) {
         Intent intent = new Intent(context, activity);
         context.startActivity(intent);
+        ((Activity) context).finish();
     }
 
     public ShowScreen(Context context, Class activity, boolean isSave) {
         Intent intent = new Intent(context, activity);
         context.startActivity(intent);
-        if (isSave) {
+        if (!isSave) {
             ((Activity) context).finish();
         }
     }

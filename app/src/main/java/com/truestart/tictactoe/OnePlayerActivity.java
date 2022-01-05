@@ -1,10 +1,13 @@
 package com.truestart.tictactoe;
 
 import android.annotation.SuppressLint;
+import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -34,6 +37,10 @@ public class OnePlayerActivity extends AppCompatActivity {
 
     FloatingActionButton refreshButton;
 
+    LinearLayout linearLayout;
+
+    float sizeGame = 1.0f;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +56,12 @@ public class OnePlayerActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(TITLE);
 
         new ChangeStatusBarColor().defColor(getWindow(), this);
+
+        linearLayout = findViewById(R.id.view);
+        SharedPreferences sharedPreferences = getSharedPreferences("AppSize", MODE_PRIVATE);
+        sizeGame = sharedPreferences.getFloat("size", 1.0f);
+        linearLayout.animate().scaleY(sizeGame);
+        linearLayout.animate().scaleX(sizeGame);
 
         map = new int[3][3];
 
@@ -361,13 +374,13 @@ public class OnePlayerActivity extends AppCompatActivity {
                         .setTitle("Game end")
                         .setMessage("Draw")
                         .setCancelable(true)
-                        .setPositiveButton("Restart", (dialog, which) -> {
+                        .setPositiveButton(Html.fromHtml("<font color='#000000'>Restart</font>"), (dialog, which) -> {
                             restartGame();
                             if (player == 2) {
                                 RobotFunction();
                             }
                         })
-                        .setNegativeButton("Cancel", (dialog, which) -> super.onBackPressed())
+                        .setNegativeButton(Html.fromHtml("<font color='#000000'>Cancel</font>"), (dialog, which) -> super.onBackPressed())
                         .create();
                 alertDialog.show();
             }
@@ -399,7 +412,7 @@ public class OnePlayerActivity extends AppCompatActivity {
         AlertDialog alertDialog = new AlertDialog.Builder(this)
                 .setTitle("Game end")
                 .setMessage(String.format("%s win", winner))
-                .setPositiveButton("Restart", (dialog, which) -> {
+                .setPositiveButton(Html.fromHtml("<font color='#000000'>Restart</font>"), (dialog, which) -> {
                     restartGame();
                     if (finalWinner.equals("X")) {
                         player = 2;
@@ -411,7 +424,7 @@ public class OnePlayerActivity extends AppCompatActivity {
                         RobotFunction();
                     }
                 })
-                .setNegativeButton("Cancel", (dialog, which) -> super.onBackPressed())
+                .setNegativeButton(Html.fromHtml("<font color='#000000'>Cancel</font>"), (dialog, which) -> super.onBackPressed())
                 .create();
         alertDialog.show();
     }
